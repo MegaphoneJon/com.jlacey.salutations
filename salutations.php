@@ -178,7 +178,7 @@ function salutations_civicrm_buildForm($formName, &$form) {
     CRM_Core_Resources::singleton()->addScriptFile('com.jlacey.salutations', 'js/hide-core-greetings.js');
   }
   // Inject the Salutation Export JS.
-  if ($formName == 'CRM_Export_Form_Map') {
+  if (strpos($formName, '_Export_Form_Map')) {
     CRM_Core_Resources::singleton()->addScriptFile('com.jlacey.salutations', 'js/salutationexport.js');
   }
 }
